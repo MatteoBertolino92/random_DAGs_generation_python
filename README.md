@@ -7,15 +7,16 @@ matteobertolino1992@gmail.com
 
 ## Scope of the scripts
 
-main.py: it creates one random graph
+`main.py`: it creates one random graph
 
-generateInputs.py: it uses main.py to generate a set of random graphs 
+`generateInputs.py`: it uses `main.py` to generate a set of random graphs 
 
 ## Usage
 
-MAIN.PY
+**MAIN.PY**
 
-python -s main.py numberOfTasks breadhtRecommended filename --fpga
+`python -s main.py numberOfTasks breadhtRecommended filename --fpga`
+
 
 where:
 
@@ -29,9 +30,10 @@ where:
 
 Note: resources generation (i.e., CLBs, DSPs, EMBs, HET) are pseudo-randomly generated from boundaries which are hard-coded.
 
-GENERATEINPUTS.PY
 
-python -s generateInputs.py nbOfGraphs nbOfTasks maximumParallelism offsetForGraphName
+**GENERATEINPUTS.PY**
+
+`python -s generateInputs.py nbOfGraphs nbOfTasks maximumParallelism offsetForGraphName`
 
 where:
 
@@ -51,10 +53,10 @@ NOTE 3: it is not possible, for instance, putting offsetForGraphName equal to 3 
 
 ## Examples
 MAIN.PY
-python -s main.py 10 5 "testGraph.txt" --fpga
+`python -s main.py 10 5 "testGraph.txt" --fpga`
 
 GENERATEINPUTS.PY
-python -s generateInputs.py 10 12 4 0
+`python -s generateInputs.py 10 12 4 0`
 
 10 graphs will be created, from "graph0.txt" to "graph9.txt". Each graph has 12 tasks and there will be at most 4 tasks in parallel.
 It is assured that no one of such graphs have the same topology.
